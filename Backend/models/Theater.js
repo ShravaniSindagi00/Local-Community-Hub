@@ -1,4 +1,5 @@
 // backend/models/Theater.js
+const mongoose = require('mongoose')
 const TheaterSchema = new mongoose.Schema({
     name: { type: String, required: true },
     location: { type: String, required: true },

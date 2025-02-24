@@ -1,4 +1,5 @@
 // backend/models/Hotel.js
+const mongoose = require('mongoose')
 const HotelSchema = new mongoose.Schema({
     name: { type: String, required: true },
     specialtyDishes: { type: [String], required: true },

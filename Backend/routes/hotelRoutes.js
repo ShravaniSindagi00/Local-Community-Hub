@@ -1,5 +1,6 @@
+const express = require('express')
 const hotelRouter = express.Router();
-const { getHotels, getHotelById, createHotel, updateHotel, deleteHotel } = require("../controllers/hotelController");
+const { getHotels, getHotelById, createHotel, updateHotel, deleteHotel } = require("../controller/hotelController");
 
 hotelRouter.get("/", getHotels);
 hotelRouter.get("/:id", getHotelById);

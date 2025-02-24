@@ -1,7 +1,7 @@
 // backend/routes/templeRoutes.js
 const express = require("express");
 const router = express.Router();
-const { getTemples, getTempleById, createTemple, updateTemple, deleteTemple } = require("../controllers/templeController");
+const { getTemples, getTempleById, createTemple, updateTemple, deleteTemple } = require("../controller/templeController");
 
 router.get("/", getTemples);
 router.get("/:id", getTempleById);

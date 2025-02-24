@@ -1,5 +1,6 @@
+const express = require("express");
 const theaterRouter = express.Router();
-const { getTheaters, getTheaterById, createTheater, updateTheater, deleteTheater } = require("../controllers/theaterController");
+const { getTheaters, getTheaterById, createTheater, updateTheater, deleteTheater } = require("../controller/theaterController");
 
 theaterRouter.get("/", getTheaters);
 theaterRouter.get("/:id", getTheaterById);
