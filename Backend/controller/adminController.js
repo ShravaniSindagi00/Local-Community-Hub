@@ -32,9 +32,18 @@ exports.loginAdmin = async (req, res) => {
 
 exports.getAdminProfile = async (req, res) => {
   try {
+    console.log("Admin ID from token:", req.admin?.id);  // Debugging
     const admin = await Admin.findById(req.admin.id).select("-password");
+    
+    if (!admin) {
+      return res.status(404).json({ message: "Admin not found" });
+    }
+    
     res.json(admin);
   } catch (error) {
-    res.status(500).json({ message: "Server error" });
+    console.error("Error in getAdminProfile:", error);  // Debugging
+    res.status(500).json({ message: "Server error", error: error.message });
   }
 };
+
+
