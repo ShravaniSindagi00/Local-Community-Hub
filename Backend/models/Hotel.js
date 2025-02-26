@@ -1,10 +1,10 @@
-// backend/models/Hotel.js
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
+
 const HotelSchema = new mongoose.Schema({
-    name: { type: String, required: true },
-    specialtyDishes: { type: [String], required: true },
-    timings: { type: String, required: true },
-    location: { type: String, required: true },
-  }, { timestamps: true });
-  
-  module.exports = mongoose.model("Hotel", HotelSchema);
+  name: { type: String, required: true },
+  location: { type: String, required: true },
+  rating: { type: Number, required: true },
+  timings: { type: String, required: false }  // 👈 Now not required
+});
+
+module.exports = mongoose.model("Hotel", HotelSchema);
